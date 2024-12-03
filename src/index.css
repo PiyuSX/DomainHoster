@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default text colors for common elements */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900 dark:text-white;
+}
+
+p {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+/* Form elements */
+input, textarea {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-200 dark:border-gray-700;
+}
+
+/* Links */
+a {
+  @apply text-primary-light hover:text-primary-dark;
+}
+
+/* Animations */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* Page transitions */
+.page-transition {
+  position: relative;
+}
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Typing cursor animation */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
